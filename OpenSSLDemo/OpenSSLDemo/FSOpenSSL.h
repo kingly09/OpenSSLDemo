@@ -20,9 +20,21 @@
 #import <Foundation/Foundation.h>
 
 @interface FSOpenSSL : NSObject
+
+/**
+ * 加密
+ */
++(NSData *)encryptFromData:(NSData *)data;
+
+/**
+ * 解密
+ */
++(NSData *)DecryptFromData:(NSData *)data;
+
 + (NSString *)md5FromString:(NSString *)string;
 
 + (NSString *)sha256FromString:(NSString *)string;
 
 + (NSString *)base64FromString:(NSString *)string encodeWithNewlines:(BOOL)encodeWithNewlines;
+
 @end

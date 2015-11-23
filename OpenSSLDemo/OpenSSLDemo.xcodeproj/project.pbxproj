@@ -21,6 +21,7 @@
 		BC652B001C02E9FD00671CFE /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = BC652AFB1C02E9FC00671CFE /* NSString+Base64.m */; };
 		BC652B021C02EDCF00671CFE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC652B011C02EDCE00671CFE /* Security.framework */; };
 		BC652B051C02F03200671CFE /* FSOpenSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = BC652B031C02F03200671CFE /* FSOpenSSL.m */; };
+		BC652B651C0324F900671CFE /* NSData+DataToHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = BC652B641C0324F900671CFE /* NSData+DataToHexString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,8 @@
 		BC652B011C02EDCE00671CFE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BC652B031C02F03200671CFE /* FSOpenSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOpenSSL.m; sourceTree = "<group>"; };
 		BC652B041C02F03200671CFE /* FSOpenSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOpenSSL.h; sourceTree = "<group>"; };
+		BC652B631C0324F900671CFE /* NSData+DataToHexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DataToHexString.h"; sourceTree = "<group>"; };
+		BC652B641C0324F900671CFE /* NSData+DataToHexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DataToHexString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				BC652AA71C02E9FC00671CFE /* openssl */,
 				BC652A901C02E7EF00671CFE /* AppDelegate.h */,
 				BC652A911C02E7EF00671CFE /* AppDelegate.m */,
+				BC652B631C0324F900671CFE /* NSData+DataToHexString.h */,
+				BC652B641C0324F900671CFE /* NSData+DataToHexString.m */,
 				BC652A931C02E7EF00671CFE /* ViewController.h */,
 				BC652A941C02E7EF00671CFE /* ViewController.m */,
 				BC652B031C02F03200671CFE /* FSOpenSSL.m */,
@@ -359,6 +364,7 @@
 			files = (
 				BC652B001C02E9FD00671CFE /* NSString+Base64.m in Sources */,
 				BC652A951C02E7EF00671CFE /* ViewController.m in Sources */,
+				BC652B651C0324F900671CFE /* NSData+DataToHexString.m in Sources */,
 				BC652A9B1C02E7EF00671CFE /* OpenSSLDemo.xcdatamodeld in Sources */,
 				BC652AFF1C02E9FD00671CFE /* NSData+Base64.m in Sources */,
 				BC652B051C02F03200671CFE /* FSOpenSSL.m in Sources */,
@@ -477,6 +483,7 @@
 					"armv7s，armv7",
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OpenSSLDemo/openssl/include/";
 				INFOPLIST_FILE = OpenSSLDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -485,6 +492,7 @@
 					"$(PROJECT_DIR)/OpenSSLDemo/openssl",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xw.NetworkDemo.OpenSSLDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -499,6 +507,7 @@
 					"armv7s，armv7",
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OpenSSLDemo/openssl/include/";
 				INFOPLIST_FILE = OpenSSLDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -507,6 +516,7 @@
 					"$(PROJECT_DIR)/OpenSSLDemo/openssl",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xw.NetworkDemo.OpenSSLDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -532,6 +542,7 @@
 				BC652AA61C02E7EF00671CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

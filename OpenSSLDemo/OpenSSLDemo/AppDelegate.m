@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FSOpenSSL.h"
+#import "NSData+DataToHexString.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSString *testStr = @" libin test";
+    
+    NSData *stringData = [testStr dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSData *encryptData =  [FSOpenSSL encryptFromData:stringData];
+    
+    NSData *decryptData =  [FSOpenSSL DecryptFromData:encryptData];
+    
+    NSString *result = [[NSString alloc] initWithData:decryptData  encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"result::%@",result);
     
     return YES;
 }

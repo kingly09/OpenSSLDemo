@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSData+DataToHexString.h"
 
 @interface ViewController ()
 
